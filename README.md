@@ -80,7 +80,8 @@ The following JSON snippet will be used throughout setup:
   }
 }
 ```
-
+## Update `.env` (Required)*
+> 1. Copy `.env.example` to `.env` and fill in each field.
 
 ## Update Widget One Time (no live updates)
 > 1. Copy the above JSON snippet
