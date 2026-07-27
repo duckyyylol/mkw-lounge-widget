@@ -15,7 +15,7 @@ Display your Mario Kart World Lounge stats in a pretty Discord profile widget.
 > - [A guide to do this can be found here](https://chloecinders.com/blog/discord-widgets)
 
 > [!CAUTION]
-> Much of this process involves running someone else's code in your browser console, which can leave you vulnerable to attacks by malicious users. The widget itself is perfectly safe, though pasting and executing code in your browser console is generally not recommended for non-technical users. Please take the time to understand the code you are running before you run it. The source code of this widget is available in this repository for review.
+> Much of this process involves running someone else's code in your browser console, which can leave you vulnerable to attacks by malicious users. The widget itself is perfectly safe, though pasting and executing code in your browser console is generally not recommended for non-technical users. Please take the time to understand the code you are running before you run it. The source code of this widget is available in this repository for review, though the code snippets in the external guide provided should be reviewed before execution.
 
 ## Update `.env` (Required)*
 > 1. Copy `.env.example` to `.env` and fill in each field.
