@@ -14,77 +14,14 @@ Display your Mario Kart World Lounge stats in a pretty Discord profile widget.
 > 
 > - [A guide to do this can be found here](https://chloecinders.com/blog/discord-widgets)
 
-The following JSON snippet will be used throughout setup:
-```json
-{
-  "data": {
-    "dynamic": [
-      {
-        "type": 1,
-        "name": "name",
-        "value": "Setup"
-      },
-      {
-        "type": 2,
-        "name": "season",
-        "value": 3
-      },
-      {
-        "type": 3,
-        "name": "rankicon",
-        "value": {
-          "url": "https://files.ducky.wiki/share/public_assets/external/lounge_ranks/iron.png"
-        }
-      },
-      {
-        "type": 1,
-        "name": "mmr",
-        "value": "0000"
-      },
-      {
-        "type": 1,
-        "name": "rank",
-        "value": "None"
-      },
-      {
-        "type": 1,
-        "name": "averages",
-        "value": "00.0 / 00.0"
-      },
-      {
-        "type": 2,
-        "name": "events",
-        "value": 0
-      },
-      {
-        "type": 1,
-        "name": "peakmmr",
-        "value": "0000"
-      },
-      {
-        "type": 1,
-        "name": "winrate",
-        "value": "0%"
-      },
-      {
-        "type": 1,
-        "name": "gamemode",
-        "value": "0P"
-      },
-      {
-        "type": 1,
-        "name": "globalrank",
-        "value": "#0"
-      }
-    ]
-  }
-}
-```
 ## Update `.env` (Required)*
 > 1. Copy `.env.example` to `.env` and fill in each field.
 
+## Create Fallback Asset (Required)*
+> 1. While you're editing your widget's config, upload an asset called `loungeicon` to be used as the main image for the widget.
+
 ## Update Widget One Time (no live updates)
-> 1. Copy the above JSON snippet
+> 1. Copy the JSON snippet from below
 > 2. Follow [this guide](https://chloecinders.com/blog/discord-widgets) to create your widget and enter the configuration screen.
 > 3. Once in the config, press the 3 dots in the top right and choose `Paste config from clipboard` 
 > 4. Choose `Save`, then `Publish` 
@@ -96,13 +33,294 @@ The following JSON snippet will be used throughout setup:
 > [!IMPORTANT]
 > This requires a way to run the script 24/7, which could be done by running it on startup, or hosting it on a server.
 
-> 1. Copy the above JSON snippet
+> 1. Copy the JSON snippet from below
 > 2. Follow [this guide](https://chloecinders.com/blog/discord-widgets) to create your widget and enter the configuration screen.
 > 3. Once in the config, press the 3 dots in the top right and choose `Paste config from clipboard` 
 > 4. Choose `Save`, then `Publish` 
 > 5. Clone this repository and enter the directory
 > 6. Run `npm install` to install the NPM dependencies
 > 7. Run `npm run track` to start sending real Lounge data to the widget on a 180-second interval 
+
+The following JSON snippet will be used throughout setup:
+```json
+{
+  "_type": "discord_widget_config",
+  "surfaces": {
+    "widget_bottom": {
+      "layout": "widget_bottom_stats",
+      "components": {
+        "stat_5": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "number",
+              "value": "events",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Events Played"
+            }
+          }
+        },
+        "stat_6": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "winrate",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Win Rate"
+            }
+          }
+        },
+        "stat_3": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "averages",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Avg. / Partner Avg."
+            }
+          }
+        },
+        "stat_2": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "rank",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "icon": {
+              "value_type": "data",
+              "presentation_type": "image",
+              "value": "rankicon"
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Rank"
+            }
+          }
+        },
+        "stat_4": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "peakmmr",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Peak MMR"
+            }
+          }
+        },
+        "stat_1": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "mmr",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "MMR"
+            }
+          }
+        }
+      }
+    },
+    "mini_profile": {
+      "layout": "mini_profile_hero_stat",
+      "components": {
+        "stat": {
+          "fields": {
+            "text": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "mmr",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "icon": {
+              "value_type": "data",
+              "presentation_type": "image",
+              "value": "rankicon",
+              "fallback": {
+                "value_type": "application_asset",
+                "presentation_type": "image",
+                "value": "loungeicon"
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "MMR"
+            }
+          }
+        },
+        "hero_image": {
+          "fields": {
+            "image": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "loungeicon"
+            }
+          }
+        }
+      }
+    },
+    "widget_top": {
+      "layout": "widget_top_contained",
+      "components": {
+        "subtitle_2": {
+          "fields": {
+            "text": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "gamemode",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Game Mode"
+            }
+          }
+        },
+        "title": {
+          "fields": {
+            "text": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "name",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            }
+          }
+        },
+        "subtitle_1": {
+          "fields": {
+            "text": {
+              "value_type": "data",
+              "presentation_type": "number",
+              "value": "season",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Season"
+            }
+          }
+        },
+        "subtitle_3": {
+          "fields": {
+            "text": {
+              "value_type": "data",
+              "presentation_type": "text",
+              "value": "globalrank",
+              "fallback": {
+                "value_type": "custom_string",
+                "presentation_type": "text",
+                "value": "Loading..."
+              }
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Global Rank"
+            }
+          }
+        },
+        "contained_image": {
+          "fields": {
+            "image": {
+              "value_type": "data",
+              "presentation_type": "image",
+              "value": "rankicon",
+              "fallback": {
+                "value_type": "application_asset",
+                "presentation_type": "image",
+                "value": "loungeicon"
+              }
+            }
+          }
+        }
+      }
+    },
+    "add_widget_preview": {
+      "layout": "add_widget_preview_contained",
+      "components": {
+        "contained_image": {
+          "fields": {
+            "image": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "loungeicon"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
 ---
 
 #### Made by @duckyyylol
