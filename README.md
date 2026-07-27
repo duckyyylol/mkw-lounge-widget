@@ -27,7 +27,8 @@ Display your Mario Kart World Lounge stats in a pretty Discord profile widget.
 > 4. Choose `Save`, then `Publish` 
 > 5. Clone this repository and enter the directory
 > 6. Run `npm install` to install the NPM dependencies
-> 7. Run `npm run sync` to push real Lounge data to the widget 
+> 7. Run `npm run sync` to push real Lounge data to the widget
+> 8. Follow [these instructions](https://chloecinders.com/blog/discord-widgets#adding-the-widget-to-your-profile) to add the widget to your profile 
 
 ## Live Widget Updates
 > [!IMPORTANT]
@@ -39,7 +40,8 @@ Display your Mario Kart World Lounge stats in a pretty Discord profile widget.
 > 4. Choose `Save`, then `Publish` 
 > 5. Clone this repository and enter the directory
 > 6. Run `npm install` to install the NPM dependencies
-> 7. Run `npm run track` to start sending real Lounge data to the widget on a 180-second interval 
+> 7. Run `npm run track` to start sending real Lounge data to the widget on a 180-second interval
+> 8. Follow [these instructions](https://chloecinders.com/blog/discord-widgets#adding-the-widget-to-your-profile) to add the widget to your profile 
 
 The following JSON snippet will be used throughout setup:
 ```json
