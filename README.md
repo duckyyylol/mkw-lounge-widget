@@ -326,6 +326,16 @@ The following JSON snippet will be used throughout setup:
 }
 ```
 
+## FAQ
+---
+
+| Question | Answer |
+|----------|--------|
+| Is this against Discord TOS? Will it get me banned?         | No. We are using this feature how Discord intended it to be used, it's just unreleased to the public.       |
+| Why can't I just click a link to add the widget to my profile?         | As Game Stat Widgets are currently unreleased, they are restricted. You can not currently edit the widget of another user.       |
+| This is hard...         | It sure is! Unfortunately, that is the nature of using unreleased and undocumented features. Hopefully Discord doesn't kill this feature too and this won't be so hard in the future.       |
+| Can you make me a widget for [enter game here]?         | Currently, no. Check back when the feature is fully released, as I may have more widgets available.         |
+
 ---
 
 #### Made by @duckyyylol
