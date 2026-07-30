@@ -4,6 +4,13 @@ Display your Mario Kart World Lounge stats in a pretty Discord profile widget.
 > [!CAUTION]
 > This widget is subject to change, or stop working entirely, based on Discord's rollout of the custom widget feature.
 
+> [!CAUTION]
+> It changed! As of today, Discord has announced that the custom widgets experiment will come to an end.
+> 
+> [Game Stat widgets are releasing to **developers who have claimed their game on Discord**](https://support-dev.discord.com/hc/en-us/articles/42261641635351-Game-Stats-Widget-Experiment), and no new widgets can be created. It is possible that Discord will release a version of this feature for everyone, in which case this repository will most likely be updated.
+>
+> Feel free to browse through this code to understand how Game Stat widgets work(ed).
+
 ![Screenshot of the Widget](screenshots/widget.png)
 ---
 ## Get Started
